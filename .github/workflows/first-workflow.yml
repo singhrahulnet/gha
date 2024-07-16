@@ -1,4 +1,3 @@
-
 name: CI
 
 on:
@@ -14,11 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Run a one-line script
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: echo ${{ toJson(github) }}
-
